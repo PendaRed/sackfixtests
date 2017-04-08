@@ -16,7 +16,7 @@ settings.  Then fire up sbt and run the tests.
 
 JDK 1.8, Scala 2.11.
 
-## Does your client need to do anything special?
+## Does your server need to do anything special?
 
 The tests require that should you receive a NewOrderSingle then you should reply with an
 ExecutionReport.   For instance, see T8_ResendRequestSpec.
