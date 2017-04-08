@@ -1,10 +1,10 @@
-<img src ="http://www.sackfix.org/assets/sf_logo.png" />
+<a href="http://www.sackfix.org/"><img src ="http://www.sackfix.org/assets/sf_logo.png" /></a>
 
 # Sack Fix tests
 
 SackFixTests is the independent test suite used to validate the session layer implementation within SackFix.
  
-It does not rely on SackFix itself (see [sackfix.org](www.sackfix.org)) but includes a very tiny set of
+It does not rely on SackFix itself (see [sackfix.org](http://www.sackfix.org/)) but includes a very tiny set of
 utility classes to act as a Fix initiator.
 
 This means you can use it to validate your own session layer implementation.
@@ -201,4 +201,4 @@ Very slow test, waiting 22 seconds for heartbeat to arrive
 [success] Total time: 99 s, completed
 </pre>
 
-  <img src ="http://www.sackfix.org/assets/sackfix.png" />
+<a href="http://www.sackfix.org/"><img src ="http://www.sackfix.org/assets/sackfix.png" /></a>
