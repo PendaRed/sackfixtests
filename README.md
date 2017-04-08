@@ -1,5 +1,4 @@
-![SF](http://www.sackfix.org/assets/sf_logo.png)
-![SackFix](http://www.sackfix.org/assets/sackfix.png)
+<div style="text-align:center"><img src ="http://www.sackfix.org/assets/sf_logo.png" /><img src ="http://www.sackfix.org/assets/sackfix.png" /></div>
 
 # Sack Fix tests
 
