@@ -1,3 +1,7 @@
+{: style="text-align:center"}
+![SF](http://www.sackfix.org/assets/sf_logo.png)
+![SackFix](http://www.sackfix.org/assets/sackfix.png)
+
 # Sack FIX tests
 
 SackFixTests is the independent test suite used to validate the session layer implementation within SackFix.
