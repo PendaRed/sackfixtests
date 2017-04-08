@@ -1,7 +1,4 @@
-<div style="vertical-align:center">
-  <img src ="http://www.sackfix.org/assets/sf_logo.png" />
-  <img src ="http://www.sackfix.org/assets/sackfix.png" />
-</div>
+<img src ="http://www.sackfix.org/assets/sf_logo.png" />
 
 # Sack Fix tests
 
@@ -203,3 +200,5 @@ Very slow test, waiting 22 seconds for heartbeat to arrive
 [info] All tests passed.
 [success] Total time: 99 s, completed
 </pre>
+
+  <img src ="http://www.sackfix.org/assets/sackfix.png" />
