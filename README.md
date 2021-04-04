@@ -1,20 +1,29 @@
 <a href="http://www.sackfix.org/"><img src ="http://www.sackfix.org/assets/sf_logo.png" /></a>
 
-# Sack Fix tests
+# SackFix
 
-SackFixTests is the independent test suite used to validate the session layer implementation within SackFix.
- 
-It does not rely on SackFix itself (see [sackfix.org](http://www.sackfix.org/)) but includes a very tiny set of
-utility classes to act as a Fix initiator.
+A Scala Fix Engine implementation.  It is a full implementation of the session level protocol, tested using the sackfix tester project, supporting acceptor and initiators using AKKA and Scala.
 
-This means you can use it to validate your own session layer implementation.
+To get started simply download the [examples project](https://github.com/PendaRed/sackfixexamples) and start the acceptor and then the initiator.   The SackFix suite consists of
 
-Start up your Fix server implementation, change the src/main/resources/application.conf so that it matches your server 
-settings.  Then fire up sbt and run the tests.
+* [Examples](https://github.com/PendaRed/sackfixexamples): This is all you need!
+* [Tester](https://github.com/PendaRed/sackfixtests): A very simple test suite to stress out any Session level implementation.
+* [Session](https://github.com/PendaRed/sackfixsessions): All of the statemachines and message handling for the Fix Session.  ie the business logic lives here.
+* [Messages](https://github.com/PendaRed/sackfixmessages): Code generated Fix Messages for all versions of fix.
+* [Common](https://github.com/PendaRed/sackfix): The code generator and common classes - including all the code generated Fields.
+
+Full documentation is at [SackFix.org](http://www.sackfix.org/).
 
 ## Versions
 
-JDK 1.8, Scala 2.13.
+Upgraded in 2021 to akka typed and scala 2.13.
+
+| Version | Year | built with |
+|---------|------|------------|
+| 0.1.0  | 2017 | JDK 1.8, Scala 2.11, SBT 0.13.12, Akka 2.4.16 |
+| 0.1.3  | 2021 | JDK 1.8, Scala 2.13.5, SBT 1.4.7, Akka 2.6.13 |
+
+Feel free to upgrade and generate your own version.
 
 ## Does your server need to do anything special?
 
