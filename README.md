@@ -14,7 +14,7 @@ settings.  Then fire up sbt and run the tests.
 
 ## Versions
 
-JDK 1.8, Scala 2.11.
+JDK 1.8, Scala 2.13.
 
 ## Does your server need to do anything special?
 
@@ -56,9 +56,11 @@ All the best,
 
 Jonathan
 
-2017
+2017 & updated in 2021
 
 ## How to run it
+
+Edit application.conf with the IP address of your server.
 
 <pre>
 cd into the base dir of the project
