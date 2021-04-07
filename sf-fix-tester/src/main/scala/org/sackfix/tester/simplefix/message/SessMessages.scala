@@ -1,10 +1,9 @@
 package org.sackfix.tester.simplefix.message
 
 import java.text.SimpleDateFormat
-import java.time.LocalDateTime
+import java.time.{LocalDateTime, ZoneId, ZonedDateTime}
 import java.time.format.DateTimeFormatter
 import java.util.Date
-
 import org.sackfix.tester.simplefix.codec.SimpleCodec
 import org.sackfix.tester.simplefix.config.TestConfig
 import org.sackfix.tester.simplefix.codec.SimpleCodec
@@ -32,6 +31,8 @@ class SessMessages(val startSeqNum: Int,
   // "20170101-10:26:32"
   val transactTimeFormatter = new SimpleDateFormat("YYYYMMdd-HH:mm:ss")
 
+  def now: LocalDateTime = ZonedDateTime.now.withZoneSameInstant(ZoneId.of("UTC")).toLocalDateTime
+
   def incSeqNum: Int = {
     val ret = seqNum
     seqNum += 1
@@ -45,7 +46,7 @@ class SessMessages(val startSeqNum: Int,
       (FixTags.SenderCompID, senderCompId),
       (FixTags.TargetCompID, targetCompId),
       (FixTags.MsgSeqNum, "" + seqNum),
-      (FixTags.SendingTime, tmFormatter.format(LocalDateTime.now())))
+      (FixTags.SendingTime, tmFormatter.format(now)))
 
   def getHeader(msgType: String): Array[(Int, String)] =
     getHeader(incSeqNum, msgType)
@@ -107,7 +108,7 @@ class SessMessages(val startSeqNum: Int,
   }
 
   def sequenceReset(possDupFlag: String, gapFillYN: String, resetSeqNum: Int): Unit = {
-    val prevTime = LocalDateTime.now().minusMinutes(5)
+    val prevTime = now.minusMinutes(5)
     val msgTuples: Array[(Int, String)] = getHeader(MsgTypes.SequenceReset) ++
       Array((FixTags.PossDupFlag, possDupFlag),
         (FixTags.OrigSendingTime, tmFormatter.format(prevTime)),

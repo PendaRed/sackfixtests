@@ -16,19 +16,14 @@ Full documentation is at [SackFix.org](http://www.sackfix.org/).
 
 ## Versions
 
-JDK 1.8, Scala 2.11, SBT 0.13.12, Akka 2.4.16.   Feel free to upgrade.
+Upgraded in 2021 to akka typed and scala 2.13.
 
-# What is this project?
+| Version | Year | built with |
+|---------|------|------------|
+| 0.1.0  | 2017 | JDK 1.8, Scala 2.11, SBT 0.13.12, Akka 2.4.16 |
+| 0.1.3  | 2021 | JDK 1.8, Scala 2.13.5, SBT 1.4.7, Akka 2.6.13 |
 
-SackFixTests is the independent test suite used to validate the session layer implementation within SackFix.
- 
-It does not rely on SackFix itself (see [sackfix.org](http://www.sackfix.org/)) but includes a very tiny set of
-utility classes to act as a Fix initiator.
-
-This means you can use it to validate your own session layer implementation.
-
-Start up your Fix server implementation, change the src/main/resources/application.conf so that it matches your server 
-settings.  Then fire up sbt and run the tests.
+Feel free to upgrade and generate your own version.
 
 ## Does your server need to do anything special?
 
@@ -70,9 +65,11 @@ All the best,
 
 Jonathan
 
-2017
+2017 & updated in 2021
 
 ## How to run it
+
+Edit application.conf with the IP address of your server.
 
 <pre>
 cd into the base dir of the project
